@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <PackageId>OpenTK.NET.iOS</PackageId>
+    <PackageVersion>1.0.2</PackageVersion>
+    <VersionSuffix>1</VersionSuffix>
+    <Description>OpenTK in NET.iOS</Description>
+    <PackageProjectUrl>https://github.com/cxzhe/OpenTK.NET.iOS</PackageProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;TRACE;DEBUG;NET;NET7_0;NETCOREAPP</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;TRACE;RELEASE;NET;NET7_0;NETCOREAPP</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+</Project>

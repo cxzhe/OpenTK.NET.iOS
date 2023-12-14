@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenTK.NET.iOS\OpenTK.NET.iOS.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Shader.vsh" />
+    <None Remove="Shader.fsh" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Shader.vsh" />
+    <BundleResource Include="Shader.fsh" />
+  </ItemGroup>
+</Project>
